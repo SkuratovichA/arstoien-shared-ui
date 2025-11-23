@@ -1,0 +1,40 @@
+# Source files (only dist should be published)
+src/
+
+# Git
+.git/
+.gitignore
+
+# Development
+.vscode/
+.idea/
+node_modules/
+
+# Config files
+tsconfig.json
+tsup.config.ts
+.eslintrc*
+.prettierrc*
+
+# Testing
+test/
+*.test.ts
+*.spec.ts
+coverage/
+
+# Documentation (keep README.md)
+# README.md is NOT ignored
+
+# Misc
+*.log
+.DS_Store
+.env*
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Keep these
+# dist/
+# tailwind.preset.js
+# package.json
+# README.md
