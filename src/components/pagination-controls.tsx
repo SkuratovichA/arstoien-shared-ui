@@ -18,7 +18,7 @@ export function PaginationControls({
     return null;
   }
 
-  const visiblePages = Math.min(totalPages, maxVisiblePages);
+  const visiblePages = Math.min(totalPages, maxVisiblePages!);
   const pageNumbers: number[] = [];
 
   for (let i = 0; i < visiblePages; i++) {

@@ -7,7 +7,7 @@ import { createClient } from 'graphql-ws';
 import toast from 'react-hot-toast';
 import { env } from './env';
 import { ErrorLink } from '@apollo/client/link/error';
-import createUploadLink from 'apollo-upload-client/createUploadLink.mjs';
+import UploadHttpLink from 'apollo-upload-client/UploadHttpLink.mjs';
 
 const inMemoryCache = new InMemoryCache({
   typePolicies: {
@@ -39,7 +39,7 @@ const inMemoryCache = new InMemoryCache({
   },
 });
 
-const uploadLink = createUploadLink({
+const uploadLink = new UploadHttpLink({
   uri: env.graphqlUrl,
   credentials: 'include',
   headers: {
